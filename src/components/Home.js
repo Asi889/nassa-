@@ -8,12 +8,8 @@ function Home() {
     useEffect(() => {
         (async () => {
             const starData = await axios.get(`https://api.nasa.gov/planetary/apod?api_key=PP8V4Kpt9zDxPUG6jDC2cAHzVAFa6CDw8SB1iYv1`)
-            let pictureOFTheDay = {
-                title: starData.data.title,
-                image: starData.data.url,
-                description: starData.data.explanation,
-            };
-            setPictureData(pictureOFTheDay);
+
+            setPictureData(starData.data);
 
         })()
     }, [])

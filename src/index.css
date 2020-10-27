@@ -20,8 +20,9 @@ code {
   border: 2px solid rgba(128, 125, 125, 0.76);
   background-color: rgba(224, 224, 223, 0.863);
   text-align: center;
-  margin-left: 15%;
   margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto
 }
 
 .cardImg{
@@ -37,6 +38,7 @@ text-align: center;
 
 .homeImg{
   width: 90%;
+  
 }
 
 .navBar{

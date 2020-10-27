@@ -13,9 +13,9 @@ function App() {
     <Router>
       <div className='App'>
       <NavBar />
-      <Route path='/home' exact render={() => <Home key="willie" />}/>
-      <Route path='/search' exact render={() => <Search key="willie1" />}/>
-      <Route path='/favorites' exact render={() => <Favorites key="willie2" />}/>
+      <Route path='/home' exact render={() => <Home />}/>
+      <Route path='/search' exact render={() => <Search />}/>
+      <Route path='/favorites' exact render={() => <Favorites />}/>
       <Route path='/favorite1/:id' exact render={({ match }) => <Favorites match={match} />}/>
         
       </div>

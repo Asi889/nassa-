@@ -25,23 +25,17 @@ function Search() {
             )
 
         setSearchPics(newSearchArr);
-        console.log(newSearchArr);
-        console.log(searchPics);
+        
     };
 
     const addToFavorites = async (e) => {
-        let titleImgDescriptoin = e.target.name
-        let image = titleImgDescriptoin.slice(0, titleImgDescriptoin.indexOf(' '));
-        let title = titleImgDescriptoin.slice(titleImgDescriptoin.indexOf(' '),titleImgDescriptoin.indexOf('  '));
-        let description = titleImgDescriptoin.slice(titleImgDescriptoin.indexOf('  '));
-        
+       
         let newFavoret = {
-            title: title,
-            image: image,
-            description: description,
+            title: e.target.getAttribute('data-title'),
+            image: e.target.getAttribute('data-pic'),
+            description: e.target.getAttribute('data-description'),
             inFavorite: true
         }
-        console.log(newFavoret)
         await axios.post('http://localhost:5000/favorite', newFavoret)
     };
     console.log(searchPics)
